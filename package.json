@@ -1,0 +1,25 @@
+{
+  "name": "taewookim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taewookimfardark/gnp.git"
+  },
+  "author": "taewookim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taewookimfardark/gnp/issues"
+  },
+  "homepage": "https://github.com/taewookimfardark/gnp#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-animate": "^1.5.6",
+    "angular-aria": "^1.5.6",
+    "angular-material": "^1.0.9"
+  }
+}
