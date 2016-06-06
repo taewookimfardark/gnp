@@ -13,20 +13,19 @@
     </md-toolbar>
 
     <div class="container" layout="row" flex>
-        <md-sidenav md-is-locked-open="true" class="lightblue" layout="column">
+        <md-sidenav md-is-locked-open="true" layout="column">
             <md-toolbar>user info</md-toolbar>
             <md-list role="list">
                 <md-list>
-                    <md-button><a ui-sref="main" class = "main">메인</a></md-button>
+                    <md-button ui-sref="main" class="main">메인</md-button>
+                <md-list>
+                    <md-button ui-sref="matchschedule" class="matchschedule">경기일정</md-button>
                 </md-list>
                 <md-list>
-                    <md-button><md-button><a ui-sref="matchschedule" class = "matchschedule">경기일정</a></md-button></md-button>
+                    <md-button ui-sref="matchresult" class="matchresult">경기결과</md-button>
                 </md-list>
                 <md-list>
-                    <md-button><md-button><a ui-sref="matchresult" class = "matchresult">경기결과</a></md-button></md-button>
-                </md-list>
-                <md-list>
-                    <md-button><md-button><a ui-sref="playerresult" class = "playerresult">선수기록</a></md-button></md-button>
+                    <md-button ui-sref="playerresult" class="playerresult">선수기록</md-button>
                 </md-list>
             </md-list>
         </md-sidenav>
