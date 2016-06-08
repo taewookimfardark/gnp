@@ -3,9 +3,16 @@ var mongoose = require('mongoose'),
 
 var UserSchema = new Schema(
     {
-        nickname: String,
+        nickname: {
+            type: String,
+            trim: true
+        },
         email: String,
-        password: String
+        password: String,
+        created:{
+            type: Date,
+            default: Date.now
+        }
     }
 );
 
