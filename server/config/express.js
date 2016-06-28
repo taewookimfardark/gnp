@@ -5,6 +5,7 @@ var express = require('express'),
     methodOverride = require('method-override'),
     session = require('express-session'),
     config = require('./config');
+    cors = require('cors');
 
 //var uri = 'mongodb://localhost/mean';
 //var db = require('mongoose').connect(uri);
@@ -33,6 +34,8 @@ module.exports = function(){
         resave: true,
         secret: config.sessionSecret
     }));
+    
+    app.use(cors({credentials: true, origin: true}));
     
     app.set('views', './views');
     app.set('view engine', 'ejs');

@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>login</h1>
-</body>
-</html>
+
+<div layout="column" layout-align="center center" layout-fill>
+    <div class="loginBox md-whiteframe-z1" layout="column">
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span> Login </span>
+        </h2>
+    </md-toolbar>
+
+    <md-content class="md-padding" layout="column">
+    <md-input-container>
+        <label>EmailAddress</label>
+        <input type="email" ng-model="username">
+    </md-input-container>
+    <md-input-container>
+        <label>Password</label>
+        <input type="password" ng-model="password">
+    </md-input-container>
+
+    <div layout="row" layout-align="center center" style="padding-top:20px;">
+        <md-button class="md-raised md-primary">Login</md-button>
+        <div flex>
+            <md-button href="" md-no-ink>Forgot Password</md-button>
+        </div>
+    </div>
+    </md-content>
+    </div>
+</div>
