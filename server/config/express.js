@@ -5,8 +5,7 @@ var express = require('express'),
     methodOverride = require('method-override'),
     session = require('express-session'),
     config = require('./config'),
-    cors = require('cors'),
-    mysql = require('mysql');
+    cors = require('cors');
 
 //var uri = 'mongodb://localhost/mean';
 //var db = require('mongoose').connect(uri);
@@ -43,7 +42,6 @@ module.exports = function(){
 
     require('../routes/index.server.routes')(app);
     require('../routes/users.server.routes.js')(app);
-    require('../routes/playerrecord.server.routes.js')(app);
     
     app.use(express.static('./public'));
     
