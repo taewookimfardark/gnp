@@ -1,12 +1,12 @@
 gnp_app.controller("testController", ["$scope", "httpRequest",
     function ($scope, httpRequest) {
-        $scope.userDate = "test";
+        $scope.userData = "test";
         console.log("11");
         httpRequest.send('GET','users')
             .then(
                 function (res){
                     console.log("22");
-                    console.log(res);
+                    $scope.userData = res.data;
                 },
                 function(res){
                     console.log(res);

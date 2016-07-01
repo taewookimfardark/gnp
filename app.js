@@ -1,4 +1,4 @@
-var gnp_app = angular.module('gnp_app',['ui.router','ngMaterial']);
+var gnp_app = angular.module('gnp_app',['ui.router','ngMaterial','ui.grid']);
 
 gnp_app.config(function($stateProvider, $urlRouterProvider)
 {
@@ -19,13 +19,10 @@ gnp_app.config(function($stateProvider, $urlRouterProvider)
             templateUrl: "src/match_schedule.html",
             controller: "testController"
         })
-        .state('matchresult',{
-            url: "/matchresult",
-            templateUrl: "src/match_result.html"
-        })
         .state('playerresult',{
             url: "/playerresult",
-            templateUrl: "src/player_result.html"
+            templateUrl: "src/player_result.html",
+            controller: "recordController"
         });
     
 });
