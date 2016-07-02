@@ -42,6 +42,7 @@ module.exports = function(){
 
     require('../routes/index.server.routes')(app);
     require('../routes/users.server.routes.js')(app);
+    require('../routes/matches.server.routes.js')(app);
     
     app.use(express.static('./public'));
     

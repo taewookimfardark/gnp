@@ -9,6 +9,5 @@ module.exports = function(app){
         .delete(users.delete);
     
     app.param('userId', users.userById);
-    
 };
 
