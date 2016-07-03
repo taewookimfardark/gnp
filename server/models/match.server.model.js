@@ -5,6 +5,7 @@ var MatchSchema = new Schema(
     {
         tag : String,
         against : String,
+        where : String,
         when : Date,
         matchinfo : String,
         score_gnp : Number,
