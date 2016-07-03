@@ -17,12 +17,16 @@ gnp_app.config(function($stateProvider, $urlRouterProvider)
         .state('matchschedule',{
             url: "/matchschedule",
             templateUrl: "src/match_schedule.html",
-            controller: "testController"
+            controller: "matchController"
+        })
+        .state('matchrecord',{
+            url: "/matchrecord",
+            templateUrl: "src/match_record.html",
+            controller: "matchRecordController"
         })
         .state('playerresult',{
             url: "/playerresult",
-            templateUrl: "src/player_result.html",
-            controller: "recordController"
+            templateUrl: "src/player_result.html"
         });
     
 });

@@ -35,7 +35,7 @@ exports.read = function(req, res)
 exports.userById = function(req, res, next, id)
 {
     Match.findOne(
-        {_id : id}, function(err, user){ if (err) {return next(err)} else {req.match = match; next();}}
+        {_id : id}, function(err, match){ if (err) {return next(err)} else {res.json(match); next();}}
     );
 };
 
