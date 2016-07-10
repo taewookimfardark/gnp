@@ -17,19 +17,19 @@ exports.create = function(req, res, next)
 
 exports.list = function(req, res, next)
 {
-    Match.find({}, function(err, users)
+    Match.find({}, function(err, matches)
     {
         if(err){
             return next(err);
         } else{
-            res.json(users);
+            res.json(matches);
         }
     });
 };
 
 exports.read = function(req, res)
 {
-    res.json(req.user);
+    res.json(req.match);
 };
 
 exports.userById = function(req, res, next, id)

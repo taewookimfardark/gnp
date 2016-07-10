@@ -1,10 +1,23 @@
-<div class="container" layout="row" flex>
-    <md-sidenav md-is-locked-open="true" layout="column">
+<div class="container" layout="row">
+    <md-sidenav md-is-locked-open="true" layout="column" class="md-whiteframe-1dp" flex>
         <md-list role="list">
-            <md-list ng-repeat=" user in userList">{{user.email}}</md-list>
+            <div class="md-3-line" ng-repeat=" user in userCheckbox | filter: {ischecked : false}">
+                <md-checkbox ng-model="user.ischecked">
+                    {{user}}
+                </md-checkbox>
+            </div>
         </md-list>
     </md-sidenav>
-    <md-content flex id="content"flex>
+    <md-content id="content" class="md-whiteframe-1dp" flex>
         <div>{{matchDetail.tag}}  vs  {{matchDetail.against}}</div>
+        <div>
+        <md-list role="list">
+            <div class="md-3-line" ng-repeat=" user in userCheckbox | filter: {ischecked : true}">
+                <md-checkbox ng-model="user.ischecked">
+                    {{user}}
+                </md-checkbox>
+            </div>
+        </md-list>
+        </div>
     </md-content>
 </div>
