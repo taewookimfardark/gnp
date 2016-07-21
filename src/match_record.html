@@ -12,12 +12,43 @@
         <div>{{matchDetail.tag}}  vs  {{matchDetail.against}}</div>
         <div>
         <md-list role="list">
-            <div class="md-3-line" ng-repeat=" user in userCheckbox | filter: {ischecked : true}">
+            <div class="md-3-line" ng-repeat=" user in userCheckbox | filter: {ischecked : true}" layout-gt-sm="row">
                 <md-checkbox ng-model="user.ischecked">
-                    {{user}}
                 </md-checkbox>
-            </div>
-        </md-list>
+                    <div ng-repeat="player in matchPlayerRecord"></div>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Name</label>
+                            <input data-ng-model="player.name">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Back number</label>
+                            <input data-ng-model="player.backnumber">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Points</label>
+                            <input data-ng-model="player.points">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Assists</label>
+                            <input data-ng-model="player.assists">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Rebounds</label>
+                            <input data-ng-model="player.rebounds">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Blocks</label>
+                            <input data-ng-model="player.blocks">
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Steals</label>
+                            <input ng-model="player.steals">
+                        </md-input-container>
+                        <md-button ng-click="addplayer(player)">추가</md-button>
+                    </div>
+            <button ng-click="addmatch()">기록추가</button>
+            <button ng-click="console()">console check</button>
+        </md-list>가
         </div>
     </md-content>
 </div>

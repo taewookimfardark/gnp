@@ -35,13 +35,13 @@ exports.read = function(req, res)
 exports.userById = function(req, res, next, id)
 {
     Match.findOne(
-        {_id : id}, function(err, match){ if (err) {return next(err)} else {res.json(match); next();}}
+        {_id : id}, function(err, match){ if (err) {return next(err)} else {req.match = match; next();}}
     );
 };
 
 exports.update = function(req, res, next)
 {
-    Match.findByIdAndUpdate(req.match.id, req.body, function(err, user)
+    Match.findByIdAndUpdate(req.match.id, req.body, function(err, match)
     {
         if(err)
         {
@@ -49,7 +49,7 @@ exports.update = function(req, res, next)
         }
         else
         {
-            res.json(user);
+            res.json(match);
         }
     });
 };
