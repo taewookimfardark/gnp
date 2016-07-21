@@ -26,7 +26,8 @@ gnp_app.config(function($stateProvider, $urlRouterProvider)
         })
         .state('playerresult',{
             url: "/playerresult",
-            templateUrl: "src/player_result.html"
+            templateUrl: "src/player_result.html",
+            controller: "playerRecordController"
         });
     
 });
