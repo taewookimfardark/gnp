@@ -1,4 +1,4 @@
-gnp_app.controller("matchRecordController",["$scope","$rootScope","httpRequest",function($scope,$rootScope,httpRequest)
+gnp_app.controller("matchRecordController",["$scope","$rootScope","httpRequest","$state",function($scope,$rootScope,httpRequest,$state)
 {
 
     $scope.userCheckbox=[];
@@ -89,6 +89,9 @@ gnp_app.controller("matchRecordController",["$scope","$rootScope","httpRequest",
                 {
                     console.log("match update!");
                     console.log(res);
+                    alert("추가 완료!");
+                    $state.go('matchschedule');
+
                 },
                 function(res)
                 {
