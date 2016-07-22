@@ -1,8 +1,6 @@
 gnp_app.controller("matchController", ["$scope", "httpRequest","$mdDialog","$mdMedia","$rootScope", function ($scope, httpRequest, $mdDialog, $mdMedia, $rootScope)
 {
-    console.log("matchcontroller is on");
-    
-    
+
     // htt request
     httpRequest.send('GET','matches')
         .then(

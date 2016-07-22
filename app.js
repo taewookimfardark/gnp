@@ -1,5 +1,28 @@
 var gnp_app = angular.module('gnp_app',['ui.router','ngMaterial','ui.grid']);
 
+gnp_app.run(['$rootScope','$state',function($rootScope,$state)
+{
+    $rootScope.$on('$stateChangeStart',function()
+    {
+        if($state.is('login')==true)
+        {
+            console.log("되고있어");
+            $rootScope.loginsuccess = true;
+            $rootScope.loginfail = false;
+        }
+
+    });
+
+    $rootScope.$on('$stateChangeSuccess',function()
+    {
+        if($state.is('join'))
+        {
+            $rootScope.loginsuccess = false;
+            $rootScope.loginfail = true;
+        };
+    });
+}]);
+
 gnp_app.config(function($stateProvider, $urlRouterProvider)
 {
     console.log("config on");
@@ -8,12 +31,18 @@ gnp_app.config(function($stateProvider, $urlRouterProvider)
     $stateProvider
         .state('login',{
             url: "/login",
-            templateUrl: "src/login.html"
+            templateUrl: "src/login.html",
+            controller: "loginController"
         })
         .state('join',{
             url: "/join",
             templateUrl: "src/join.html",
             controller: "joinController"
+        })
+        .state('mypage',{
+            url: "/mypage",
+            templateUrl: "src/mypage.html",
+            controller: "mypageController"
         })
         .state('main',{
             url: "/main",
@@ -33,6 +62,12 @@ gnp_app.config(function($stateProvider, $urlRouterProvider)
             url: "/playerresult",
             templateUrl: "src/player_result.html",
             controller: "playerRecordController"
+        })
+        .state('logout',{
+            url: "/login",
+            templateUrl: "src/login.html",
+            controller: "logoutController"
         });
+        
     
 });
