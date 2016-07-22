@@ -10,6 +10,11 @@ gnp_app.config(function($stateProvider, $urlRouterProvider)
             url: "/login",
             templateUrl: "src/login.html"
         })
+        .state('join',{
+            url: "/join",
+            templateUrl: "src/join.html",
+            controller: "joinController"
+        })
         .state('main',{
             url: "/main",
             templateUrl: "src/main.html"
