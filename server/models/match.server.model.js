@@ -17,9 +17,7 @@ var MatchSchema = new Schema(
             backnumber : Number,
             points : Number,
             assists : Number,
-            rebounds : Number,
-            blocks : Number,
-            steals : Number
+            rebounds : Number
         }],
         created:{
             type: Date,
