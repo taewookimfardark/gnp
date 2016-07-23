@@ -9,8 +9,6 @@ gnp_app.controller("matchRecordController",["$scope","$rootScope","httpRequest",
             points : '',
             assists : '',
             rebounds : '',
-            blocks : '',
-            steals : ''
         }
     ];
     
