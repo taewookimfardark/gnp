@@ -10,7 +10,6 @@ var UserSchema = new Schema(
         records:
                 {
                     games : Number,
-                    backnumber : Number,
                     points : Number,
                     assists : Number,
                     rebounds : Number
