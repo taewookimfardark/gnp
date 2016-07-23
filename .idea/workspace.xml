@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f885b0d-7b83-4118-8f68-228038e8fea0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/matchRecordController.js" afterPath="$PROJECT_DIR$/controllers/matchRecordController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/playerRecordController.js" afterPath="$PROJECT_DIR$/controllers/playerRecordController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/match_record.html" afterPath="$PROJECT_DIR$/src/match_record.html" />
     </list>
     <ignored path="gnp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,8 +107,8 @@
       <file leaf-file-name="playerRecordController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/playerRecordController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="306">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -475,12 +473,12 @@
       <workItem from="1468911464943" duration="16000" />
       <workItem from="1469113004716" duration="8307000" />
       <workItem from="1469160565005" duration="6299000" />
-      <workItem from="1469266637843" duration="15437000" />
+      <workItem from="1469266637843" duration="16595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126317000" />
+    <option name="totallyTimeSpent" value="127475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -841,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/playerRecordController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="306">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding />
         </state>
       </provider>
