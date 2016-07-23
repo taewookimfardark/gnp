@@ -25,11 +25,11 @@
                     <div ng-repeat="player in matchPlayerRecord"></div>
                         <md-input-container class="md-block" flex-gt-sm>
                             <label>Name</label>
-                            <input data-ng-model="player.name">
+                            <input data-ng-model="player.name" ng-init="player.name = user.name">
                         </md-input-container>
                         <md-input-container class="md-block" flex-gt-sm>
                             <label>Back number</label>
-                            <input data-ng-model="player.backnumber">
+                            <input data-ng-model="player.backnumber" ng-init="player.backnumber = user.number">
                         </md-input-container>
                         <md-input-container class="md-block" flex-gt-sm>
                             <label>Points</label>

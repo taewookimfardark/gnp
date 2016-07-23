@@ -11,9 +11,9 @@ gnp_app.controller('playerRecordController', ["$scope", "httpRequest", function 
                     temp.Name = res.data[index].name;
                     temp.Backnumber = res.data[index].backnumber;
                     temp.Games = res.data[index].records.games;
-                    temp.Points = res.data[index].records.points;
-                    temp.Rebounds = res.data[index].records.rebounds;
-                    temp.Assists = res.data[index].records.assists;
+                    temp.Points = parseFloat(res.data[index].records.points/temp.Games);
+                    temp.Rebounds = parseFloat(res.data[index].records.rebounds/temp.Games);
+                    temp.Assists = parseFloat(res.data[index].records.assists/temp.Games);
                     
                     $scope.playerrecord.push(temp);
                     
