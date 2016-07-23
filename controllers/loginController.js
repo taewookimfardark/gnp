@@ -1,8 +1,7 @@
-gnp_app.controller("loginController", ["$scope","$rootScope", function ($scope,$rootScope) {
+gnp_app.controller("loginController", ["$scope","$rootScope","httpRequest", function ($scope,$rootScope,httpRequest) {
+    
     $rootScope.loginsuccess = false;
-    $rootScope.loginfail = true;
-    console.log("test");
-    console.log($rootScope.loginsuccess);
-    console.log($rootScope.loginfail);
+    
+
 }]);
 
