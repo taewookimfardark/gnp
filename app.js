@@ -8,7 +8,6 @@ gnp_app.run(['$rootScope','$state',function($rootScope,$state)
         {
             console.log("되고있어");
             $rootScope.loginsuccess = true;
-            $rootScope.loginfail = false;
         }
 
     });
@@ -18,7 +17,6 @@ gnp_app.run(['$rootScope','$state',function($rootScope,$state)
         if($state.is('join'))
         {
             $rootScope.loginsuccess = false;
-            $rootScope.loginfail = true;
         };
     });
 }]);

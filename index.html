@@ -18,11 +18,11 @@
             <md-list role="list" layout="column" layout-align="center">
                     <md-button ui-sref="login" class="login" ng-hide="loginsuccess">로그인</md-button>
                     <md-button ui-sref="mypage" class="mypage" ng-show="loginsuccess">내정보</md-button>
-                    <md-button ui-sref="main" class="main">메인</md-button>
-                    <md-button ui-sref="matchschedule" class="matchschedule">
+                    <md-button ui-sref="main" class="main" ng-show="loginsuccess">메인</md-button>
+                    <md-button ui-sref="matchschedule" class="matchschedule" ng-show="loginsuccess">
                         경기 일정/결과
                     </md-button>
-                    <md-button ui-sref="playerresult" class="playerresult">선수기록</md-button>
+                    <md-button ui-sref="playerresult" class="playerresult" ng-show="loginsuccess">선수기록</md-button>
                     <md-button ui-sref="logout" class="logout" ng-show="loginsuccess">log out</md-button>
                 </md-list>
         </md-sidenav>
