@@ -3,13 +3,20 @@
         <md-list role="list">
             <div class="md-3-line" ng-repeat=" user in userCheckbox | filter: {ischecked : false}">
                 <md-checkbox ng-model="user.ischecked">
-                    {{user}}
+                    {{user.name}} {{user.number}}
                 </md-checkbox>
             </div>
         </md-list>
     </md-sidenav>
     <md-content id="content" class="md-whiteframe-1dp" flex>
         <div>{{matchDetail.tag}}  vs  {{matchDetail.against}}</div>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>About</label>
+            <input data-ng-model="matchinfo">
+        </md-input-container>
+        <md-switch data-ng-model="wincheck" aria-label="Switch 1" ng-click="check()">
+            경기결과: {{matchresult}}
+        </md-switch>
         <div>
         <md-list role="list">
             <div class="md-3-line" ng-repeat=" user in userCheckbox | filter: {ischecked : true}" layout-gt-sm="row">
@@ -36,11 +43,11 @@
                             <label>Rebounds</label>
                             <input data-ng-model="player.rebounds">
                         </md-input-container>
-                        <md-button ng-click="addplayer(player)">추가</md-button>
+                        <md-switch aria-label="Switch 1" ng-click="addplayer(player)">
+                        </md-switch>
                     </div>
-            <button ng-click="addmatch()">기록추가</button>
-            <button ng-click="console()">console check</button>
-        </md-list>가
+            <button ng-click="addmatch()">경기기록</button>
+        </md-list>
         </div>
     </md-content>
 </div>

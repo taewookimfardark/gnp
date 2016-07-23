@@ -8,13 +8,27 @@ gnp_app.controller("matchRecordController",["$scope","$rootScope","httpRequest",
             backnumber : '',
             points : '',
             assists : '',
-            rebounds : '',
+            rebounds : ''
         }
     ];
+
+    $scope.matchresult = "win";
+    $scope.wincheck = false;
+
+    $scope.check = function()
+    {
+        if($scope.wincheck == true)
+        {$scope.matchresult = "win";}
+        else 
+        {$scope.matchresult = "lose";}
+    };
+    
+    $scope.matchinfo = "";
     
     $scope.matchupdate = {
         finish : true,
-        win : true,
+        win : $scope.wincheck,
+        matchinfo : $scope.matchinfo,
         members : $scope.matchPlayerRecord
     };
     
@@ -63,16 +77,7 @@ gnp_app.controller("matchRecordController",["$scope","$rootScope","httpRequest",
             }
         );
 
-    // $scope.clickwhy = function(item)
-    // {
-    //     alert("click");
-    //     console.log("click!!");
-    //     console.log(item);
-    //     item.ischecked = true;
-    // };
-    // $scope.$watch( "userCheckbox" , function(n,o){
-    //     console.log(n + o);
-    // }, true );
+    
     $scope.console = function()
     {
         console.log($scope.matchPlayerRecord);
