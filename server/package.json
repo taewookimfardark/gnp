@@ -1,0 +1,35 @@
+{
+  "name": "taewookim",
+  "version": "0.0.1",
+  "description": "app engine node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "monitor": "nodemon server.js",
+    "deploy" : "gcloud app deploy"
+  },
+  "engines":{
+    "node":"~4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taewookimfardark/gnp.git"
+  },
+  "author": "taewookim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taewookimfardark/gnp/issues"
+  },
+  "homepage": "https://github.com/taewookimfardark/gnp#readme",
+  "dependencies": {
+    "body-parser": "~1.8.0",
+    "compression": "~1.0.11",
+    "ejs": "~1.0.0",
+    "express": "^4.13.4",
+    "express-session": "~1.7.6",
+    "method-override": "~2.2.0",
+    "mongoose": "~3.8.15",
+    "morgan": "~1.3.0"
+  }
+}
